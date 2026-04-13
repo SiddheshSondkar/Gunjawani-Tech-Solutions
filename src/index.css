@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  /* High-Performance Tech Palette (Premium Slate/Navy) */
+  --color-gts-blue: #3B82F6; /* Premium Blue */
+  --color-gts-green: #10B981; /* Premium Emerald */
+  --color-gts-dark: #0F172A; /* Deep Slate (No Black) */
+  --color-gts-card: #1E293B; /* Slate Card (Proper Shading) */
+  --color-gts-light: #F8FAFC; /* Crisp White */
+  --color-gts-gray: #94A3B8; /* Cool Slate Gray */
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gts-blue to-gts-green;
+  }
+  
+  .bg-gradient-gts {
+    @apply bg-gradient-to-r from-gts-blue to-gts-green;
+  }
+  
+  .glass-panel {
+    @apply bg-[#1E293B]/80 backdrop-blur-xl border border-white/10 shadow-[0_8px_30px_rgb(15,23,42,0.6)];
+  }
+  
+  .premium-shadow {
+    box-shadow: 0 20px 40px -15px rgba(15,23,42,0.6);
+  }
+  
+  .premium-card {
+    @apply bg-gts-card border border-white/5 rounded-3xl transition-all duration-500;
+    box-shadow: 0 20px 40px -15px rgba(15,23,42,0.5);
+  }
+}
+
+body {
+  background-color: var(--color-gts-dark);
+  color: var(--color-gts-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-gts-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
