@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import logo from '../images/logo.png'; 
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {

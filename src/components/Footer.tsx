@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../images/logo.png'; // Ensure you have a logo image in the specified path or update the path accordingly
 
 export default function Footer() {
   return (
