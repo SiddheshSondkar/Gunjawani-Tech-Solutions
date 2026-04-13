@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.png'; // Ensure you have a logo image in the specified path or update the path accordingly
-
+import logo from '../images/logo.png';
 export default function Footer() {
   return (
     <footer className="bg-gts-dark py-16 border-t border-white/[0.08] relative z-10">
@@ -10,7 +9,7 @@ export default function Footer() {
             <a href="/" className="flex items-center gap-2 mb-6 group">
               {/* LOGO: Replace the src below with the path to your actual logo image (e.g., '/logo.png') */}
               <img 
-                src="/logo.png" 
+                src={logo}
                 alt="GTS Logo" 
                 className="h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
                 onError={(e) => {

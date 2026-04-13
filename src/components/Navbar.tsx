@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import logo from '../images/logo.png'; 
+import logo from '../images/logo.png'; // Ensure you have a logo image in the specified path or update the path accordingly
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
         <a href="/" className="flex items-center gap-2 group">
           {/* LOGO: Replace the src below with the path to your actual logo image (e.g., '/logo.png') */}
           <img 
-            src="/logo.png" 
+            src={logo} 
             alt="GTS Logo" 
             className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
             onError={(e) => {
